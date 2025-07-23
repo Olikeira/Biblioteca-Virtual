@@ -23,6 +23,8 @@ Aplicação web full-stack que simula o funcionamento de uma biblioteca online. 
     * **Firebase Authentication**
     * **Cloud Firestore** / **Realtime Database** (como banco de dados NoSQL)
 
+<img width="1866" height="913" alt="Image" src="https://github.com/user-attachments/assets/442d6128-dfac-4c02-827d-224fc356c998" />
+
 ## Configuração e Execução
 
 Para executar este projeto localmente, são necessários dois conjuntos de configurações: o ambiente Python e as credenciais do Firebase.
