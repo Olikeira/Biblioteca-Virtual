@@ -1,16 +1,42 @@
-# Biblioteca Online com Flask e Firebase
+<h1 align="center">
+  📚 Biblioteca Online com Flask e Firebase
+</h1>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python&logoColor=white"/>
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
+  <img alt="Firebase" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
+  <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+</p>
+
+<p align="center">
+  <a href="#-sobre-o-projeto">Sobre</a> •
+  <a href="#-funcionalidades">Funcionalidades</a> •
+  <a href="#-demonstração-visual">Demonstração</a> •
+  <a href="#️-pilha-de-tecnologias">Tecnologias</a> •
+  <a href="#-configuração-e-execução">Execução</a> •
+  <a href="#-autor">Autor</a>
+</p>
+
+## 📖 Sobre o Projeto
 
 Aplicação web full-stack que simula o funcionamento de uma biblioteca online. O projeto utiliza **Flask** (Python) para o backend, responsável por servir as páginas, e integra-se com o **Firebase** para gerenciar a autenticação de usuários e o banco de dados em tempo real.
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
 * **Autenticação de Usuários:** Sistema completo de login e cadastro utilizando o *Firebase Authentication*.
-* **Rotas Protegidas:** Acesso à página principal da biblioteca (`home.html`) somente para usuários autenticados, garantido por um *Auth Guard* no lado do cliente.
+* **Rotas Protegidas:** Acesso à página principal da biblioteca (`home.html`) somente para usuários autenticados.
 * **Validação de Formulários:** Validações em tempo real nos formulários de login e registro para melhorar a experiência do usuário.
 * **Interface Reativa:** Uso de JavaScript para interagir com o backend e o Firebase sem a necessidade de recarregar a página.
-* **(WIP) Gestão de Livros:** Estrutura pronta para implementar funcionalidades de listagem, busca e empréstimo de livros, utilizando o *Cloud Firestore* ou *Realtime Database* do Firebase.
+* **(WIP) Gestão de Livros:** Estrutura pronta para implementar funcionalidades de listagem, busca e empréstimo de livros, utilizando o *Cloud Firestore* ou *Realtime Database*.
 
-## Pilha de Tecnologias
+## 📸 Demonstração Visual
+
+<p align="center">
+  <img width="750" alt="Tela de Login da Biblioteca Online" src="https://github.com/user-attachments/assets/442d6128-dfac-4c02-827d-224fc356c998" />
+</p>
+
+## 🛠️ Pilha de Tecnologias
 
 * **Backend:**
     * **Python 3**
@@ -23,14 +49,11 @@ Aplicação web full-stack que simula o funcionamento de uma biblioteca online. 
     * **Firebase Authentication**
     * **Cloud Firestore** / **Realtime Database** (como banco de dados NoSQL)
 
-<img width="1866" height="913" alt="Image" src="https://github.com/user-attachments/assets/442d6128-dfac-4c02-827d-224fc356c998" />
+## ⚙️ Configuração e Execução
 
-## Configuração e Execução
-
-Para executar este projeto localmente, são necessários dois conjuntos de configurações: o ambiente Python e as credenciais do Firebase.
+Para executar este projeto localmente, siga os passos abaixo.
 
 ### 1. Configuração do Firebase
-
 Você precisará de um projeto no Firebase para obter as credenciais de cliente.
 
 1.  Acesse o [Console do Firebase](https://console.firebase.google.com/).
@@ -38,12 +61,12 @@ Você precisará de um projeto no Firebase para obter as credenciais de cliente.
 3.  No painel do seu projeto, vá para a seção **Authentication** > **Sign-in method** e ative o provedor "E-mail/Senha".
 4.  Ainda no painel, clique no ícone de engrenagem > **Configurações do projeto**.
 5.  Na aba "Geral", role para baixo até "Seus apps" e crie um novo **Aplicativo da Web** (ícone `</>`).
-6.  Copie o objeto de configuração `firebaseConfig` que será exibido.
-7.  Cole esse objeto de configuração dentro do seu arquivo `static/firebase-init.js`, substituindo o conteúdo existente.
+6.  Copie o objeto de configuração `firebaseConfig`.
+7.  Cole esse objeto de configuração dentro do seu arquivo `static/firebase-init.js`.
 
 ### 2. Configuração do Ambiente Local
 
-> **Nota Importante:** Seu projeto não inclui um arquivo `requirements.txt`. Este arquivo é essencial para que outras pessoas possam instalar as dependências corretas. Para gerá-lo, ative seu ambiente virtual e execute: `pip freeze > requirements.txt`. Depois, adicione-o ao seu repositório.
+> **Nota Importante:** Seu projeto precisa de um arquivo `requirements.txt` para que outras pessoas possam instalar as dependências. Para gerá-lo, ative seu ambiente virtual e execute: `pip freeze > requirements.txt`. Depois, adicione-o ao seu repositório.
 
 1.  **Clone o repositório:**
     ```bash
@@ -72,28 +95,27 @@ Você precisará de um projeto no Firebase para obter as credenciais de cliente.
     ```bash
     flask run
     ```
-    *(Ou, dependendo da configuração do seu `main.py`: `python main.py`)*
+    *(Ou, dependendo da configuração: `python main.py`)*
 
 5.  Acesse `http://127.0.0.1:5000` no seu navegador.
 
-## Estrutura do Projeto
-
+## 📂 Estrutura do Projeto
 ```
 .
-├── main.py             # Arquivo principal da aplicação Flask (rotas e lógica do servidor).
-├── static/             # Arquivos estáticos servidos ao cliente.
-│   ├── BS.css          # Folha de estilos do Bootstrap.
-│   ├── *.js            # Arquivos JavaScript para cada página e funcionalidades.
-│   └── *.css           # Estilos customizados.
-└── templates/          # Moldes HTML que o Flask renderiza.
-    ├── indexprojeto.html # Página inicial de login.
-    ├── register.html   # Página de cadastro.
-    └── home.html       # Página principal para usuários logados.
+├── main.py             # Arquivo principal da aplicação Flask
+├── static/             # Arquivos estáticos (CSS, JS)
+│   ├── BS.css          # Estilos do Bootstrap
+│   ├── *.js            # Scripts de cada página
+│   └── *.css           # Estilos customizados
+└── templates/          # Moldes HTML renderizados pelo Flask
+    ├── indexprojeto.html # Página de login
+    ├── register.html   # Página de cadastro
+    └── home.html       # Página principal (usuários logados)
 ```
 
-## Autor
+## 👨‍💻 Autor
 
 **Lucas de Oliveira Pereira**
 
-* **GitHub:** `https://github.com/Olikeira`
-* **LinkedIn:** `https://www.linkedin.com/in/lucas-de-oliveira-pereira-741936272/`
+* LinkedIn: [`lucas-de-oliveira-pereira-741936272`](https://www.linkedin.com/in/lucas-de-oliveira-pereira-741936272/)
+* GitHub: [`Olikeira`](https://github.com/Olikeira)
