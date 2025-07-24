@@ -1,5 +1,5 @@
 <h1 align="center">
-  📚 Biblioteca Online com Flask e Firebase
+  Biblioteca Online com Flask e Firebase
 </h1>
 
 <p align="center">
@@ -18,11 +18,11 @@
   <a href="#-autor">Autor</a>
 </p>
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 Aplicação web full-stack que simula o funcionamento de uma biblioteca online. O projeto utiliza **Flask** (Python) para o backend, responsável por servir as páginas, e integra-se com o **Firebase** para gerenciar a autenticação de usuários e o banco de dados em tempo real.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 * **Autenticação de Usuários:** Sistema completo de login e cadastro utilizando o *Firebase Authentication*.
 * **Rotas Protegidas:** Acesso à página principal da biblioteca (`home.html`) somente para usuários autenticados.
@@ -30,13 +30,13 @@ Aplicação web full-stack que simula o funcionamento de uma biblioteca online. 
 * **Interface Reativa:** Uso de JavaScript para interagir com o backend e o Firebase sem a necessidade de recarregar a página.
 * **(WIP) Gestão de Livros:** Estrutura pronta para implementar funcionalidades de listagem, busca e empréstimo de livros, utilizando o *Cloud Firestore* ou *Realtime Database*.
 
-## 📸 Demonstração Visual
+## Demonstração Visual
 
 <p align="center">
   <img width="750" alt="Tela de Login da Biblioteca Online" src="https://github.com/user-attachments/assets/442d6128-dfac-4c02-827d-224fc356c998" />
 </p>
 
-## 🛠️ Pilha de Tecnologias
+## Pilha de Tecnologias
 
 * **Backend:**
     * **Python 3**
@@ -113,7 +113,7 @@ Você precisará de um projeto no Firebase para obter as credenciais de cliente.
     └── home.html       # Página principal (usuários logados)
 ```
 
-## 👨‍💻 Autor
+## Autor
 
 **Lucas de Oliveira Pereira**
 
